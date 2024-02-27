@@ -1,0 +1,14 @@
+@import url('../../index.css');
+
+.header-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-box h1{
+    color: var(--text-color);
+    font-family: var(--text-font);
+    letter-spacing: 0.2rem;
+    margin-top: 25px;
+}

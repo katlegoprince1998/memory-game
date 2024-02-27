@@ -1,0 +1,15 @@
+@import url('../../index.css');
+
+.container{
+    margin: 20px auto;
+    box-shadow: var(--box-shadow);
+    height: 520px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.5em;
+    background-color: var(--grid-color);
+    border-radius: 10px;
+    padding: 8px;
+}
