@@ -3,14 +3,21 @@ import React, { useState } from 'react';
 import '../assets/css/cards.css';
 import Card from './Card';
 import data from '../data/data';
+import MyFooter from './MyFooter';
 
 
 const Cards = () => {
     const [items, setItems] = useState(data().sort(() => Math.random() - 0.5));
     const [prev, setPrev] = useState(-1);
+    const reshuffle = () => {
+         setItems(data().sort(() => Math.random() - 0.5));
+         setPrev(-1);
+         
+
+    }
 
     const check = (current) => {
-       if(items[current].id == items[prev].id){
+       if(items[current].id === items[prev].id){
         items[current].stat = "correct";
         items[prev].stat = "correct";
         setItems([...items])
@@ -41,11 +48,14 @@ const Cards = () => {
     }
 
     return (
+        <>
         <div className='container'>
             {items.map((item, index) => (
                 <Card key={index} item={item} id={index} handleClick={handleClick} />
             ))}
         </div>
+        <MyFooter reshuffle={reshuffle} />
+        </>
     );
 };
 
