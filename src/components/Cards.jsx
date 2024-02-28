@@ -2,27 +2,11 @@
 import React, { useState } from 'react';
 import '../assets/css/cards.css';
 import Card from './Card';
+import data from '../data/data';
 
 
 const Cards = () => {
-    const [items, setItems] = useState([
-        {id: 1, img: 'JAVA', stat: ""},
-        {id: 1, img: 'JAVA', stat: ""},
-        {id: 2, img: 'JavaScript', stat: ""},
-        {id: 2, img: 'JavaScript', stat: ""},
-        {id: 3, img: 'PYTHON', stat: ""},
-        {id: 3, img: 'PYTHON', stat: ""},
-        {id: 4, img: 'GO', stat: ""},
-        {id: 4, img: 'GO', stat: ""},
-        {id: 5, img: 'C#', stat: ""},
-        {id: 5, img: 'C#', stat: ""},
-        {id: 6, img: 'C++', stat: ""},
-        {id: 6, img: 'C++', stat: ""},
-        {id: 7, img: 'HTML', stat: ""},
-        {id: 7, img: 'HTML', stat: ""},
-        {id: 8, img: 'REACT JS', stat: ""},
-        {id: 8, img: 'REACT JS', stat: ""},
-    ].sort(() => Math.random() - 0.5));
+    const [items, setItems] = useState(data().sort(() => Math.random() - 0.5));
     const [prev, setPrev] = useState(-1);
 
     const check = (current) => {
