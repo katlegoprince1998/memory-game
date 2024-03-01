@@ -4,6 +4,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
+}
+.score-timer-moves{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+    background-color: aliceblue;
+    width: 600px;
+    border-radius: 8px;
 }
 .button-container button{
     width: 140px;

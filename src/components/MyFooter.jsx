@@ -3,9 +3,11 @@ import '../assets/css/reshuffle.css';
 
 const MyFooter = ({reshuffle}) => {
   return (
+    <>
     <div className='button-container'>
       <button onClick={() => reshuffle()}>RESHUFFLE</button>
     </div>
+    </>
   )
 }
 
